@@ -3,6 +3,9 @@ beginBtn.onclick = startPractice;
 
 var wordarr = [];
 
+document.getElementById('page2').style.display = "none";
+document.getElementById('page3').style.display = "none";
+
 function startPractice() {
   wordarr = [];
   wordarr.push(document.getElementById('input1').value);
