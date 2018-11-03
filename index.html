@@ -19,16 +19,47 @@
 
     <script src="js/bootstrap.min.js"></script>
 
-    <script src="js/main.js"></script>
-
     <link href="css/main.css" rel="stylesheet" />
 
   </head>
 
   <body>
+    <div class="title">Sp-e-ll</div>
     <div class="container">
-      <div class="content">
+      <div class="content" id="page1">
+        <div class="wrapper">
+          <input type="text" id="input1" class="textInput" placeholder="word 1">
+          <input type="text" id="input2" class="textInput" placeholder="word 2">
+        </div>
+        <div class="wrapper">
+          <input type="text" id="input3" class="textInput" placeholder="word 3">
+          <input type="text" id="input4" class="textInput" placeholder="word 4">
+        </div>
+        <div class="wrapper">
+          <input type="text" id="input5" class="textInput" placeholder="word 5">
+          <input type="text" id="input6" class="textInput" placeholder="word 6">
+        </div>
+        <div class="range-slider">
+          <input class="input-range" type="range" value="10" min="1" max="20">
+          <span class="range-value">10 reps</span>
+        </div>
+        <a role="button" tabindex="0" id="begin" class="button btnFloat">begin</a>
+      </div>
+      <div class="content" id="page2">
       </div>
     </div>
+
+    <script>
+      var range = $('.input-range'),
+          value = $('.range-value');
+      value.html(range.attr('value') + " reps");
+
+      range.on('input', function(){
+          value.html(this.value  + " reps");
+          console.log(this.value);
+      });
+    </script>
+    <script src="js/main.js"></script>
+
   </body>
 </html>
