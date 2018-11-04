@@ -4,6 +4,12 @@ beginBtn.onclick = startPractice;
 var returnBtn = document.getElementById('return');
 returnBtn.onclick = endPractice;
 
+var switchPageBtn = document.getElementById('moreWords');
+switchPageBtn.onclick = switchPg;
+
+var startMoreBtn = document.getElementById('beginMore');
+startMoreBtn.onclick = startMore;
+
 document.getElementById('profile').onclick = showMenu;
 document.getElementById('reviewBtn').onclick = viewMissed;
 document.getElementById('logout').onclick = signOut;
@@ -23,6 +29,8 @@ var word;
 
 document.getElementById('page2').style.display = "none";
 document.getElementById('page3').style.display = "none";
+document.getElementById('page4').style.display = "none";
+
 
 var range = $('.input-range'),
     value = $('.range-value');
@@ -45,6 +53,7 @@ function endPractice() {
   document.getElementById('page1').style.display = "block";
   document.getElementById('page2').style.display = "none";
   document.getElementById('page3').style.display = "none";
+  document.getElementById('page4').style.display = "none";
   document.getElementById('input1').value = "";
   document.getElementById('input2').value = "";
   document.getElementById('input3').value = "";
@@ -79,6 +88,33 @@ function startPractice() {
   document.getElementById('page2').style.display = "block";
   document.getElementById('page1').style.display = "none";
   document.getElementById('page3').style.display = "none";
+  document.getElementById('page4').style.display = "none";
+  enabled = document.getElementById('enabled').checked;
+  showWord();
+}
+
+function switchPg() {
+  document.getElementById('page1').style.display = "none";
+  document.getElementById('page2').style.display = "none";
+  document.getElementById('page3').style.display = "none";
+  document.getElementById('page4').style.display = "block";
+}
+
+function startMore() {
+  wordarr = [];
+  pointer = 0;
+  count = 1;
+  opacity = 1;
+  enabled = false;
+  show = true;
+  if(document.getElementById('list').value != "")
+    var str = document.getElementById('list').value;
+    var res = str.split(",");
+    wordarr = res;
+  document.getElementById('page1').style.display = "none";
+  document.getElementById('page2').style.display = "block";
+  document.getElementById('page3').style.display = "none";
+  document.getElementById('page4').style.display = "none";
   enabled = document.getElementById('enabled').checked;
   showWord();
 }
@@ -107,6 +143,7 @@ function showWord() {
     document.getElementById('page1').style.display = "block";
     document.getElementById('page2').style.display = "none";
     document.getElementById('page3').style.display = "none";
+    document.getElementById('page4').style.display = "none";
     document.getElementById('input1').value = "";
     document.getElementById('input2').value = "";
     document.getElementById('input3').value = "";
@@ -170,10 +207,11 @@ function viewMissed() {
   document.getElementById('page1').style.display = "none";
   document.getElementById('page2').style.display = "none";
   document.getElementById('page3').style.display = "block";
+  document.getElementById('page4').style.display = "none";
   var words = getMissedWords();
   var ul = document.getElementById("missed");
   ul.innerHTML = '';
-  
+
   for (var i = 0; i < words.length; i++) {
 
     var listItem = document.createElement("li");

@@ -76,7 +76,7 @@
         </div>
         <div class="space"> </div>
         <a role="button" tabindex="0" id="begin" class="button btnFloat">begin</a>
-        <a role="button" tabindex="0" id="moreWords" class="button btnFloat">more words?</a>
+        <a role="button" tabindex="1" id="moreWords" class="button btnFloat">more words</a>
       </div>
       <div class="content" id="page2">
         <button id="return" class = "return">&larr;</button>
@@ -92,6 +92,24 @@
         <button id="return" class = "return2">&larr;</button>
         <ul id="missed" class="missed">
         </ul>
+      </div>
+      <div class="content" id="page4">
+        <div class = "inline">
+          <button id="return" class = "return3">&larr;</button>
+          <input type="text" id="list" class="textInput2" placeholder="list of words, separated by comma">
+        </div>
+        <div class="range-slider">
+          <input id="input-range" class="input-range" type="range" value="10" min="1" max="20">
+          <span class="range-value">10 reps</span>
+        </div>
+        <div class="wrapper">
+          <p class="speech">Enable speech?</p>
+          <label class="switch">
+            <input id="enabled" type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <a role="button" tabindex="1" id="beginMore" class="button btnFloat">begin</a>
       </div>
     </div>
 
