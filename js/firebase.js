@@ -19,8 +19,6 @@ var user = result.user;
   var credential = error.credential;
 });
 
-var database = firebase.database();
-
 function writeUserData(missedWords) {
   firebase.database().ref('users/' + token).set({
     'words': missedWords

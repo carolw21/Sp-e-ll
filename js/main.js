@@ -10,7 +10,7 @@ var enabled = false;
 var show = true;
 var word;
 
-var missedWords = retrieveWords();
+var missedWords = readUserData();
 
 document.getElementById('page2').style.display = "none";
 
