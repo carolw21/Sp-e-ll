@@ -22,6 +22,7 @@ var hidden = true;
 var word;
 
 document.getElementById('page2').style.display = "none";
+document.getElementById('page3').style.display = "none";
 
 var range = $('.input-range'),
     value = $('.range-value');
@@ -43,6 +44,7 @@ answer.addEventListener('keydown', function (e) {
 function endPractice() {
   document.getElementById('page1').style.display = "block";
   document.getElementById('page2').style.display = "none";
+  document.getElementById('page3').style.display = "none";
   document.getElementById('input1').value = "";
   document.getElementById('input2').value = "";
   document.getElementById('input3').value = "";
@@ -76,6 +78,7 @@ function startPractice() {
     wordarr.push(document.getElementById('input6').value);
   document.getElementById('page2').style.display = "block";
   document.getElementById('page1').style.display = "none";
+  document.getElementById('page3').style.display = "none";
   enabled = document.getElementById('enabled').checked;
   showWord();
 }
@@ -103,6 +106,7 @@ function showWord() {
   else {
     document.getElementById('page1').style.display = "block";
     document.getElementById('page2').style.display = "none";
+    document.getElementById('page3').style.display = "none";
     document.getElementById('input1').value = "";
     document.getElementById('input2').value = "";
     document.getElementById('input3').value = "";
@@ -149,9 +153,7 @@ function checkAnswer(e) {
 }
 
 function showMenu() {
-  console.log("sdf");
   if (typeof getToken() != 'undefined') {
-    console.log(hidden);
     hidden = !hidden;
     if (!hidden) {
       document.getElementById('logout').style.display = "block";
@@ -164,5 +166,7 @@ function showMenu() {
 }
 
 function viewMissed() {
-
+  document.getElementById('page1').style.display = "none";
+  document.getElementById('page2').style.display = "none";
+  document.getElementById('page3').style.display = "block";
 }

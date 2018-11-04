@@ -33,7 +33,14 @@ function writeUserData(missedWords) {
 }
 
 function signOut() {
-  firebase.auth().signOut();
+  firebase.auth().signOut().then(function() {
+    // Sign-out successful.
+    token = undefined;
+    user = undefined;
+    document.getElementById("profile").src = "http://mainenordmenn.com/wp-content/uploads/2017/09/Maine-Nordmenn-Board-Generic-Profile.jpg";
+  }).catch(function(error) {
+    // An error happened.
+  });
 }
 
 function getToken() {

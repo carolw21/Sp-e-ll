@@ -198,7 +198,6 @@ a.button {
   color: #ffffff;
   font-family: var(--fontFamily);
   margin-bottom: 14px;
-  margin-right: 100px;
   font-size: 30px;
   opacity: 1;
 }
@@ -285,11 +284,10 @@ input:checked + .slider:before {
   height: 16px;
 }
 
-/* return button */
-.inline div{
-  display: inline-block;
-}
 .return {
+  position:absolute;
+  left: 37%;
+  width: 100%;
   background: none;
   padding: 0px;
   border: none;
