@@ -303,8 +303,9 @@ input:checked + .slider:before {
 
 .return2 {
   position:absolute;
-  left: 37%;
-  top: -3%;
+  left: 33%;
+  margin-top: -1%;
+  /* top: 0; */
   width: 100%;
   background: none;
   padding: 0px;
