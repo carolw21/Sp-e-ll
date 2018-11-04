@@ -90,17 +90,15 @@ function showWord() {
     count += 1;
   }
   else if (count > limit && (pointer+1) < wordarr.length) {
-    console.log('access');
     pointer +=1;
     count = 1;
     opacity = 1;
     document.getElementById('word').style.opacity = 1;
-    showWord = true;
     word = wordarr[pointer];
     document.getElementById('word').innerHTML = word;
     document.getElementById('count').innerHTML = count + "/" + limit;
     count += 1;
-    console.log(count);
+    show = true;
   }
   else {
     document.getElementById('page1').style.display = "block";
