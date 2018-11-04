@@ -40,6 +40,19 @@ function signOut() {
     document.getElementById('profile').src = "http://mainenordmenn.com/wp-content/uploads/2017/09/Maine-Nordmenn-Board-Generic-Profile.jpg";
     document.getElementById('logout').style.display = "none";
     document.getElementById('reviewBtn').style.display = "none";
+    document.getElementById('page1').style.display = "block";
+    document.getElementById('page2').style.display = "none";
+    document.getElementById('page3').style.display = "none";
+    document.getElementById('input1').value = "";
+    document.getElementById('input2').value = "";
+    document.getElementById('input3').value = "";
+    document.getElementById('input4').value = "";
+    document.getElementById('input5').value = "";
+    document.getElementById('input6').value = "";
+    document.getElementById('input-range').value = "10";
+    limit = 10;
+    value.html("10 reps");
+    document.getElementById('enabled').checked = false;
   }).catch(function(error) {
     // An error happened.
   });

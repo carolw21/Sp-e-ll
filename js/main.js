@@ -172,7 +172,8 @@ function viewMissed() {
   document.getElementById('page3').style.display = "block";
   var words = getMissedWords();
   var ul = document.getElementById("missed");
-
+  ul.innerHTML = '';
+  
   for (var i = 0; i < words.length; i++) {
 
     var listItem = document.createElement("li");

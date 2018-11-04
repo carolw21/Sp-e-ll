@@ -288,7 +288,6 @@ input:checked + .slider:before {
 .return {
   position:absolute;
   left: 37%;
-  width: 100%;
   background: none;
   padding: 0px;
   border: none;
@@ -296,6 +295,29 @@ input:checked + .slider:before {
   color: #ffffff;
   font-size: 30px;
   margin-right: 50px;
+}
+
+.return:focused {
+  border: none;
+  outline: 0;
+}
+
+.return2 {
+  position:absolute;
+  left: 33%;
+  margin-top: -1%;
+  background: none;
+  padding: 0px;
+  border: none;
+  text-align: left;
+  color: #ffffff;
+  font-size: 30px;
+  margin-right: 50px;
+}
+
+.return2:focused {
+  border: none;
+  outline: 0;
 }
 
 img {
@@ -324,6 +346,12 @@ img {
   color: #B0BEC5;
 }
 
+.logout:focus {
+  border: none;
+  text-decoration: none;
+  outline: 0;
+}
+
 .reviewBtn {
   position: absolute;
   top: 90px;
@@ -337,8 +365,18 @@ img {
   color: #B0BEC5;
 }
 
+.reviewBtn:focus {
+  border: none;
+  text-decoration: none;
+  outline: 0;
+}
+
 .missed {
   color: #ffffff;
   font-family: var(--fontFamily);
   font-size: 20px;
+  display: block;
+  text-align: left;
+  margin: auto;
+  width: 30%;
 }
