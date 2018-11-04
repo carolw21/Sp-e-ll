@@ -287,7 +287,6 @@ input:checked + .slider:before {
 .return {
   position:absolute;
   left: 37%;
-  width: 100%;
   background: none;
   padding: 0px;
   border: none;
@@ -299,14 +298,13 @@ input:checked + .slider:before {
 
 .return:focused {
   border: none;
+  outline: 0;
 }
 
 .return2 {
   position:absolute;
   left: 33%;
   margin-top: -1%;
-  /* top: 0; */
-  width: 100%;
   background: none;
   padding: 0px;
   border: none;
@@ -318,6 +316,7 @@ input:checked + .slider:before {
 
 .return2:focused {
   border: none;
+  outline: 0;
 }
 
 img {
@@ -349,6 +348,7 @@ img {
 .logout:focus {
   border: none;
   text-decoration: none;
+  outline: 0;
 }
 
 .reviewBtn {
@@ -367,6 +367,7 @@ img {
 .reviewBtn:focus {
   border: none;
   text-decoration: none;
+  outline: 0;
 }
 
 .missed {
