@@ -8,3 +8,7 @@ In addition, we have used Firebase and Google Authentication to allow each user 
 # What Else is in Store?
 Given more time, we would like to add a feature allowing users to practice on the set of missed words. In addition, we wanted to integrate the Google Drive API, so users can important words from a document and save their missed words to a file for later review. In addition, we were tinkering with the idea of adding image association to strengthen one's memory and practice. 
 We hope that Sp-e-ll will be of use to any language learner out there!
+# Screenshots
+![](https://user-images.githubusercontent.com/9341911/47967781-1b7ed780-e016-11e8-9b22-ecd878a10c48.png)
+![](https://user-images.githubusercontent.com/9341911/47967783-1faaf500-e016-11e8-80bb-d23ac4ad10e4.png)
+![](https://user-images.githubusercontent.com/9341911/47967782-1d489b00-e016-11e8-9187-da90ac11737e.png)
