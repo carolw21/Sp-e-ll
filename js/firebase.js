@@ -36,6 +36,7 @@ function readUserData() {
     console.log(snapshot);
       snapshot.forEach(function(childSnapshot) {
         var word = snapshot.val();
+        console.log(word);
         arr.push(word);
       });
   });
