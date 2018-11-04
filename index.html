@@ -46,29 +46,16 @@
         <a role="button" tabindex="0" id="begin" class="button btnFloat">begin</a>
       </div>
       <div class="content" id="page2">
-        <div class="word">test</div>
+        <div id="word" class="word">test</div>
         <div class="wrapper">
           <input type="text" id="answer" class="textInput" placeholder="press enter when done...">
         </div>
         <div class="wrapper">
-          <div class="count">1/10</div>
+          <div id="count" class="count">1/10</div>
         </div>
-      </div>
-      <div class="content" id="page3">
-
       </div>
     </div>
 
-    <script>
-      var range = $('.input-range'),
-          value = $('.range-value');
-      value.html(range.attr('value') + " reps");
-
-      range.on('input', function(){
-          value.html(this.value  + " reps");
-          console.log(this.value);
-      });
-    </script>
     <script src="js/main.js"></script>
 
   </body>

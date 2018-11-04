@@ -71,6 +71,7 @@ body {
   padding-left: 8px;
   color: inherit;
   max-width: 200px;
+  min-width: 120px;
   width: 40%;
   height: 40px;
   font-family: inherit;
@@ -198,6 +199,7 @@ a.button {
   font-family: var(--fontFamily);
   margin-bottom: 14px;
   font-size: 30px;
+  opacity: 1;
 }
 
 .count {
@@ -205,5 +207,5 @@ a.button {
   text-align: center;
   color: #ffffff;
   font-family: var(--fontFamily);
-  font-size: 16px;
+  font-size: 20px;
 }
