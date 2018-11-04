@@ -4,6 +4,9 @@ beginBtn.onclick = startPractice;
 var returnBtn = document.getElementById('return');
 returnBtn.onclick = endPractice;
 
+var return2Btn = document.getElementById('return2');
+return2Btn.onclick = endPractice;
+
 var return3Btn = document.getElementById('return3');
 return3Btn.onclick = endPractice;
 
