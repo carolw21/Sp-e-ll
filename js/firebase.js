@@ -24,7 +24,7 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
 });
 
 function writeUserData(missedWords) {
-  firebase.database().ref('users/' + user.email).set({
+  firebase.database().ref('users/' + user.displayName).set({
     'words': missedWords
   });
 }
