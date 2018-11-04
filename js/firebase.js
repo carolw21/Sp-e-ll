@@ -37,7 +37,9 @@ function signOut() {
     // Sign-out successful.
     token = undefined;
     user = undefined;
-    document.getElementById("profile").src = "http://mainenordmenn.com/wp-content/uploads/2017/09/Maine-Nordmenn-Board-Generic-Profile.jpg";
+    document.getElementById('profile').src = "http://mainenordmenn.com/wp-content/uploads/2017/09/Maine-Nordmenn-Board-Generic-Profile.jpg";
+    document.getElementById('logout').style.display = "none";
+    document.getElementById('reviewBtn').style.display = "none";
   }).catch(function(error) {
     // An error happened.
   });

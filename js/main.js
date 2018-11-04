@@ -169,4 +169,14 @@ function viewMissed() {
   document.getElementById('page1').style.display = "none";
   document.getElementById('page2').style.display = "none";
   document.getElementById('page3').style.display = "block";
+  var words = getMissedWords();
+  var ul = document.getElementById("missed");
+
+  for (var i = 0; i < words.length; i++) {
+
+    var listItem = document.createElement("li");
+    listItem.innerHTML = words[i];
+
+    ul.appendChild(listItem);
+  }
 }
