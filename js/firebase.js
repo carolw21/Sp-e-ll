@@ -6,6 +6,8 @@ var token = result.credential.accessToken;
 // The signed-in user info.
 var user = result.user;
 
+var missedWords = [];
+
 }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
@@ -31,5 +33,5 @@ function readUserData() {
     var word = snapshot.val() && snapshot.val().username;
     arr.push(word);
   });
-  return arr;
+  missedWords = readUserData();
 }

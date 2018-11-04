@@ -10,8 +10,6 @@ var enabled = false;
 var show = true;
 var word;
 
-var missedWords = readUserData();
-
 document.getElementById('page2').style.display = "none";
 
 var range = $('.input-range'),
@@ -32,6 +30,7 @@ answer.addEventListener('keydown', function (e) {
 });
 
 function startPractice() {
+  console.log(missedWords);
   wordarr = [];
   pointer = 0;
   count = 1;
