@@ -6,6 +6,7 @@ returnBtn.onclick = endPractice;
 
 document.getElementById('profile').onclick = showMenu;
 document.getElementById('reviewBtn').onclick = viewMissed;
+document.getElementById('logout').onclick = signOut;
 
 document.getElementById('logout').style.display = "none";
 document.getElementById('reviewBtn').style.display = "none";
