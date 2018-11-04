@@ -64,6 +64,7 @@ function showWord() {
     var word = wordarr[pointer];
     document.getElementById('word').innerHTML = word;
     document.getElementById('count').innerHTML = count + "/" + limit;
+    count += 1;
   }
   else {
     document.getElementById('page1').style.display = "block";
