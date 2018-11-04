@@ -1,6 +1,9 @@
 var beginBtn = document.getElementById('begin');
 beginBtn.onclick = startPractice;
 
+var returnBtn = document.getElementById('return');
+returnBtn.onclick = endPractice;
+
 var wordarr = [];
 var count = 1;
 var limit = 10;
@@ -28,6 +31,21 @@ answer.addEventListener('keydown', function (e) {
         checkAnswer(e);
     }
 });
+
+function endPractice() {
+  document.getElementById('page1').style.display = "block";
+  document.getElementById('page2').style.display = "none";
+  document.getElementById('input1').value = "";
+  document.getElementById('input2').value = "";
+  document.getElementById('input3').value = "";
+  document.getElementById('input4').value = "";
+  document.getElementById('input5').value = "";
+  document.getElementById('input6').value = "";
+  document.getElementById('input-range').value = "10";
+  limit = 10;
+  value.html("10 reps");
+  document.getElementById('enabled').checked = false;
+}
 
 function startPractice() {
   console.log(missedWords);
