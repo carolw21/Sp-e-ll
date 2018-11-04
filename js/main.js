@@ -4,6 +4,9 @@ beginBtn.onclick = startPractice;
 var returnBtn = document.getElementById('return');
 returnBtn.onclick = endPractice;
 
+var return3Btn = document.getElementById('return3');
+return3Btn.onclick = endPractice;
+
 var switchPageBtn = document.getElementById('moreWords');
 switchPageBtn.onclick = switchPg;
 
