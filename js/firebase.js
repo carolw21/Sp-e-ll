@@ -31,7 +31,7 @@ function writeUserData(missedWords) {
 
 function readUserData() {
   var arr = [];
-  var wordsRef = firebase.database().ref('users/' + user.displayName + 'words');
+  var wordsRef = firebase.database().ref('users/' + user.displayName);
   wordsRef.on('value', function(snapshot) {
     console.log(snapshot);
       snapshot.forEach(function(childSnapshot) {
