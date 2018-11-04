@@ -13,6 +13,8 @@ var enabled = false;
 var show = true;
 var word;
 
+var missedWords = readUserData();
+
 document.getElementById('page2').style.display = "none";
 
 var range = $('.input-range'),
@@ -134,6 +136,8 @@ function checkAnswer(e) {
     document.getElementById('word').style.opacity = 1;
     opacity = 1;
     show = true;
+    missedWords.push(word);
+    writeUserData(missedWords);
     setTimeout(function() { document.getElementById('answer').style.color = "#455A64"; }, 1300);
   }
 }
