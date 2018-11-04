@@ -34,6 +34,7 @@ function readUserData() {
   wordsRef.on('value', function(snapshot) {
       snapshot.forEach(function(childSnapshot) {
         missedWords = snapshot.val();
+        console.log(missedWords);
       });
   });
 }
