@@ -48,7 +48,6 @@ function endPractice() {
 }
 
 function startPractice() {
-  console.log(getMissedWords());
   wordarr = [];
   pointer = 0;
   count = 1;

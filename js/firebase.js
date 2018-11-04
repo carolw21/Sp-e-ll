@@ -9,6 +9,9 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
   token = result.credential.accessToken;
   // The signed-in user info.
   user = result.user;
+  readUserData();
+
+  document.getElementById("profile").src = user.photoUrl;
 
   }).catch(function(error) {
     // Handle Errors here.
