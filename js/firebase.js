@@ -30,21 +30,17 @@ function writeUserData(missedWords) {
 }
 
 function readUserData() {
-  var arr = [];
   var wordsRef = firebase.database().ref('users/' + user.displayName);
   wordsRef.on('value', function(snapshot) {
-    console.log(snapshot);
       snapshot.forEach(function(childSnapshot) {
-        var word = snapshot.val();
-        console.log(word);
-        arr.push(word);
+        missedWords = snapshot.val();
       });
   });
-  missedWords = arr;
 }
 
 function getMissedWords() {
-  return readUserData();
+  readUserData();
+  return missedWords;
 }
 
 function addMissedWord(word) {
