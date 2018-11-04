@@ -11,7 +11,7 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
   user = result.user;
   readUserData();
 
-  document.getElementById("profile").src = user.photoUrl;
+  document.getElementById("profile").src = user.photoURL;
 
   }).catch(function(error) {
     // Handle Errors here.
