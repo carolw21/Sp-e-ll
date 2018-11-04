@@ -24,14 +24,14 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
 });
 
 function writeUserData(missedWords) {
-  firebase.database().ref('users/' + token).set({
+  firebase.database().ref('users/' + user.email).set({
     'words': missedWords
   });
 }
 
 function readUserData() {
   var arr = [];
-  firebase.database().ref('/users/' + token + '/words').once('value').then(function(snapshot) {
+  firebase.database().ref('/users/' + user.email + '/words').once('value').then(function(snapshot) {
     var word = snapshot.val();
     arr.push(word);
   });
