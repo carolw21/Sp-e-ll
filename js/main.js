@@ -6,6 +6,9 @@ var count = 1;
 var limit = 10;
 var pointer = 0;
 var opacity = 1;
+var enabled = false;
+var show = true;
+var word;
 
 document.getElementById('page2').style.display = "none";
 
@@ -30,6 +33,9 @@ function startPractice() {
   wordarr = [];
   pointer = 0;
   count = 1;
+  opacity = 1;
+  enabled = false;
+  show = true;
   if(document.getElementById('input1').value != "")
     wordarr.push(document.getElementById('input1').value);
   if(document.getElementById('input2').value != "")
@@ -44,6 +50,7 @@ function startPractice() {
     wordarr.push(document.getElementById('input6').value);
   document.getElementById('page2').style.display = "block";
   document.getElementById('page1').style.display = "none";
+  enabled = document.getElementById('enabled').checked;
   showWord();
 }
 
@@ -51,7 +58,7 @@ function showWord() {
   document.getElementById('answer').value = "";
   document.getElementById('answer').style.color = "#455A64";
   if (count <= limit && pointer < wordarr.length) {
-    var word = wordarr[pointer];
+    word = wordarr[pointer];
     document.getElementById('word').innerHTML = word;
     document.getElementById('count').innerHTML = count + "/" + limit;
     count += 1;
@@ -61,7 +68,8 @@ function showWord() {
     count = 1;
     opacity = 1;
     document.getElementById('word').style.opacity = 1;
-    var word = wordarr[pointer];
+    showWord = true;
+    word = wordarr[pointer];
     document.getElementById('word').innerHTML = word;
     document.getElementById('count').innerHTML = count + "/" + limit;
     count += 1;
@@ -75,9 +83,21 @@ function showWord() {
     document.getElementById('input4').value = "";
     document.getElementById('input5').value = "";
     document.getElementById('input6').value = "";
-    range.value = 10;
+    document.getElementById('input-range').value = "10";
     limit = 10;
     value.html("10 reps");
+    document.getElementById('enabled').checked = false;
+  }
+
+  if (!show) {
+    document.getElementById('word').style.opacity = 0;
+  } else {
+    document.getElementById('word').style.opacity = 1;
+  }
+
+  if (enabled) {
+    setTimeout(function() { responsiveVoice.speak(word); }, 500);
+    show = false;
   }
 }
 
@@ -95,6 +115,7 @@ function checkAnswer(e) {
     document.getElementById('answer').style.color = "#e50000";
     document.getElementById('word').style.opacity = 1;
     opacity = 1;
+    show = true;
     setTimeout(function() { document.getElementById('answer').style.color = "#455A64"; }, 1300);
   }
 }

@@ -11,6 +11,23 @@
 
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,300|Kalam|Comfortaa|Open+Sans|Quicksand' rel='stylesheet' type='text/css'>
 
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-auth.js"></script>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCg3IJpJB58kafWp-gHNby0jEW0vmt_nBI",
+        authDomain: "sp-e-ll.firebaseapp.com",
+        projectId: "sp-e-ll"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script src="js/firebase.js"></script>
+
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 
     <script src="js/jquery-3.3.1.min.js"></script>
 
@@ -40,9 +57,17 @@
           <input type="text" id="input6" class="textInput" placeholder="word 6">
         </div>
         <div class="range-slider">
-          <input class="input-range" type="range" value="10" min="1" max="20">
+          <input id="input-range" class="input-range" type="range" value="10" min="1" max="20">
           <span class="range-value">10 reps</span>
         </div>
+        <div class="wrapper">
+          <p class="speech">Enable speech?</p>
+          <label class="switch">
+            <input id="enabled" type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="space"> </div>
         <a role="button" tabindex="0" id="begin" class="button btnFloat">begin</a>
       </div>
       <div class="content" id="page2">
@@ -56,6 +81,19 @@
       </div>
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCg3IJpJB58kafWp-gHNby0jEW0vmt_nBI",
+        authDomain: "sp-e-ll.firebaseapp.com",
+        databaseURL: "https://sp-e-ll.firebaseio.com",
+        projectId: "sp-e-ll",
+        storageBucket: "sp-e-ll.appspot.com",
+        messagingSenderId: "283437643831"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="js/main.js"></script>
 
   </body>
