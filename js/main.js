@@ -4,6 +4,9 @@ beginBtn.onclick = startPractice;
 var returnBtn = document.getElementById('return');
 returnBtn.onclick = endPractice;
 
+document.getElementById('profile').onclick = showMenu;
+document.getElementById('reviewBtn').onclick = viewMissed;
+
 document.getElementById('logout').style.display = "none";
 document.getElementById('reviewBtn').style.display = "none";
 
