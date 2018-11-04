@@ -35,3 +35,7 @@ function readUserData() {
   });
   missedWords = readUserData();
 }
+
+function getMissedWords() {
+  return missedWords;
+}
