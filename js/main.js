@@ -135,7 +135,7 @@ function checkAnswer(e) {
     document.getElementById('word').style.opacity = 1;
     opacity = 1;
     show = true;
-    missedWords.push(word);
+    addMissedWord(word);
     writeUserData(missedWords);
     setTimeout(function() { document.getElementById('answer').style.color = "#455A64"; }, 1300);
   }
