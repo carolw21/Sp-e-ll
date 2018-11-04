@@ -297,5 +297,4 @@ input:checked + .slider:before {
   color: #ffffff;
   font-size: 30px;
   margin-right: 50px;
-  cursor: pointer;
 }
