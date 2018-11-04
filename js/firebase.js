@@ -33,7 +33,7 @@ function readUserData() {
     var word = snapshot.val() && snapshot.val().username;
     arr.push(word);
   });
-  missedWords = readUserData();
+  missedWords = arr;
 }
 
 function getMissedWords() {
