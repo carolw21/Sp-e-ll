@@ -97,11 +97,11 @@ function showWord() {
     count = 1;
     opacity = 1;
     document.getElementById('word').style.opacity = 1;
-    showWord = true;
     word = wordarr[pointer];
     document.getElementById('word').innerHTML = word;
     document.getElementById('count').innerHTML = count + "/" + limit;
     count += 1;
+    show = true;
   }
   else {
     document.getElementById('page1').style.display = "block";
@@ -139,7 +139,8 @@ function checkAnswer(e) {
       opacity -= 1/limit;
       document.getElementById('word').style.opacity = opacity;
     }
-    setTimeout(function() { showWord(); }, 1300);
+    setTimeout(function() { showWord() }, 1300);
+    console.log('access');
   }
   else {
     document.getElementById('answer').style.color = "#e50000";
