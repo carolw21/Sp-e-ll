@@ -297,6 +297,28 @@ input:checked + .slider:before {
   margin-right: 50px;
 }
 
+.return:focused {
+  border: none;
+}
+
+.return2 {
+  position:absolute;
+  left: 37%;
+  top: -3%;
+  width: 100%;
+  background: none;
+  padding: 0px;
+  border: none;
+  text-align: left;
+  color: #ffffff;
+  font-size: 30px;
+  margin-right: 50px;
+}
+
+.return2:focused {
+  border: none;
+}
+
 img {
   border-radius: 50%;
   width: 40px;
@@ -323,6 +345,11 @@ img {
   color: #B0BEC5;
 }
 
+.logout:focus {
+  border: none;
+  text-decoration: none;
+}
+
 .reviewBtn {
   position: absolute;
   top: 90px;
@@ -336,8 +363,17 @@ img {
   color: #B0BEC5;
 }
 
+.reviewBtn:focus {
+  border: none;
+  text-decoration: none;
+}
+
 .missed {
   color: #ffffff;
   font-family: var(--fontFamily);
   font-size: 20px;
+  display: block;
+  text-align: left;
+  margin: auto;
+  width: 30%;
 }
