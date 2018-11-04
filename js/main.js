@@ -82,6 +82,7 @@ function showWord() {
     count += 1;
   }
   else if (count > limit && (pointer+1) < wordarr.length) {
+    console.log('access');
     pointer +=1;
     count = 1;
     opacity = 1;
@@ -91,6 +92,7 @@ function showWord() {
     document.getElementById('word').innerHTML = word;
     document.getElementById('count').innerHTML = count + "/" + limit;
     count += 1;
+    console.log(count);
   }
   else {
     document.getElementById('page1').style.display = "block";
@@ -127,7 +129,8 @@ function checkAnswer(e) {
       opacity -= 1/limit;
       document.getElementById('word').style.opacity = opacity;
     }
-    setTimeout(function() { showWord(); }, 1300);
+    setTimeout(function() { showWord() }, 1300);
+    console.log('access');
   }
   else {
     document.getElementById('answer').style.color = "#e50000";
