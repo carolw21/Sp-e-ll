@@ -145,7 +145,9 @@ function checkAnswer(e) {
 }
 
 function showMenu() {
-  if (token) {
+  console.log("sdf");
+  if (typeof getToken() != 'undefined') {
+    console.log(hidden);
     hidden = !hidden;
     if (!hidden) {
       document.getElementById('logout').style.display = "block";
@@ -158,5 +160,5 @@ function showMenu() {
 }
 
 function viewMissed() {
-  
+
 }
