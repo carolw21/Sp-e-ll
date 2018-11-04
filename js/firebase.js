@@ -33,7 +33,7 @@ function readUserData() {
   var wordsRef = firebase.database().ref('users/' + user.displayName);
   wordsRef.on('value', function(snapshot) {
       snapshot.forEach(function(childSnapshot) {
-        missedWords = snapshot.val();
+        missedWords = snapshot.val()['words'];
         console.log(missedWords);
       });
   });
