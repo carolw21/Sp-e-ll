@@ -74,6 +74,7 @@ function startPractice() {
 }
 
 function showWord() {
+  console.log(getMissedWords());
   document.getElementById('answer').value = "";
   document.getElementById('answer').style.color = "#455A64";
   if (count <= limit && pointer < wordarr.length) {
