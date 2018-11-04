@@ -37,6 +37,8 @@ function readUserData() {
 }
 
 function getMissedWords() {
+  var missedWords = readUserData();
+  console.log(missedWords);
   return missedWords;
 }
 
