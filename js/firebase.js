@@ -32,6 +32,14 @@ function writeUserData(missedWords) {
   });
 }
 
+function signOut() {
+  firebase.auth().signOut();
+}
+
+function getToken() {
+  return token;
+}
+
 function readUserData() {
   var wordsRef = firebase.database().ref('users/' + user.displayName);
   wordsRef.on('value', function(snapshot) {

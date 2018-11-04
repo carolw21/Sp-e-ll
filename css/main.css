@@ -309,4 +309,31 @@ img {
   position: absolute;
   top: 26px;
   right: 26px;
+  cursor: pointer;
+}
+
+.logout {
+  position: absolute;
+  top: 68px;
+  right: 26px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.logout:hover {
+  text-decoration: none;
+  color: #B0BEC5;
+}
+
+.reviewBtn {
+  position: absolute;
+  top: 90px;
+  right: 26px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.reviewBtn:hover {
+  text-decoration: none;
+  color: #B0BEC5;
 }

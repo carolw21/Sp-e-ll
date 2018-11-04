@@ -4,6 +4,13 @@ beginBtn.onclick = startPractice;
 var returnBtn = document.getElementById('return');
 returnBtn.onclick = endPractice;
 
+document.getElementById('profile').onclick = showMenu;
+document.getElementById('reviewBtn').onclick = viewMissed;
+document.getElementById('logout').onclick = signOut;
+
+document.getElementById('logout').style.display = "none";
+document.getElementById('reviewBtn').style.display = "none";
+
 var wordarr = [];
 var count = 1;
 var limit = 10;
@@ -11,6 +18,7 @@ var pointer = 0;
 var opacity = 1;
 var enabled = false;
 var show = true;
+var hidden = true;
 var word;
 
 document.getElementById('page2').style.display = "none";
@@ -141,4 +149,23 @@ function checkAnswer(e) {
     writeUserData(missedWords);
     setTimeout(function() { document.getElementById('answer').style.color = "#455A64"; }, 1300);
   }
+}
+
+function showMenu() {
+  console.log("sdf");
+  if (typeof getToken() != 'undefined') {
+    console.log(hidden);
+    hidden = !hidden;
+    if (!hidden) {
+      document.getElementById('logout').style.display = "block";
+      document.getElementById('reviewBtn').style.display = "block";
+    } else {
+      document.getElementById('logout').style.display = "none";
+      document.getElementById('reviewBtn').style.display = "none";
+    }
+  }
+}
+
+function viewMissed() {
+
 }
